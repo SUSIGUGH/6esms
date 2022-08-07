@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Middle from './components/Middle';
+import AddMomo from './components/AddMomo';
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       </div>
       <div className="App-body">
         <div className="App-middle">
-          <Middle />
+          <AddMomo />
         </div>
       </div>
       <div className="App-footer">
