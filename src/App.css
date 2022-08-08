@@ -15,7 +15,7 @@
 
 .App-main {
   background-color: rgb(202, 191, 191);
-  min-height: 200%;
+  min-height: 100%;
   font-size: calc(10px + 2vmin);
   color: rgb(32, 24, 24);
 }
@@ -29,7 +29,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(128, 25, 25);
 }
 
 .App-right {
@@ -42,12 +42,12 @@
 }
 
 .App-middle {
-  background-color: black;
-  height: 45vh;
+  background-color: hwb(0 67% 29%);
+  height: 100vh;
   width: 100%;
   font-size: calc(10px + 2vmin);
   float: right;
-  color: white;
+  color: rgb(128, 25, 25);
 }
 
 .App-left {

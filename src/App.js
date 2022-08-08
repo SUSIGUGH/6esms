@@ -1,40 +1,30 @@
 import './App.css';
 import React from 'react'
-import Footer from './components/Footer'
 import Header from './components/Header'
-import AddMomo from './components/AddMomo';
+import OrderMomo from './components/OrderMomo'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ListMomo from './components/ListMomo';
+import AddMomo from './components/AddMomo';
+import Footer from './components/Footer';
+import RegisterUser from './components/RegisterUser'
 
 
 function App() {
-  const momolist = [
-    {
-    id: "1",
-    momoname: "Chicken Steam",
-    momodescription: "Normal Steam Chicken Momo with Soup and Sauce"
-    },
-    {
-      id: "2",
-      momoname: "Chicken Fried",
-      momodescription: "Normal Deep Fried Chicken Momo with Sauce"
-      },
-  ]
+ 
   return (
-    <div className="App-main">
-      <div className="App-header">
-        <Header />        
-      </div>
-      <div className="App-body">
-        <div className="App-middle">
-          <AddMomo />
-        </div>
-        <div className="App-middle">
-          <ListMomo momolist={momolist}/>
-        </div>
-      </div>
-      <div className="App-footer">
-        <Footer />
-      </div>
+    <div>
+      <Router>
+      <Header /> 
+      <Routes>
+      <Route path="/ordermomo" element={ <OrderMomo /> } momos={'ABC'}/>
+      <Route path="/listmomo" element={ <ListMomo /> } />
+      <Route path="/" element={ <OrderMomo /> } />
+      <Route path="/addmomo" element={ <AddMomo />} />
+      <Route path="/register" element={ <RegisterUser />} />
+        
+        </Routes>
+        </Router>
+      <Footer />
     </div>
  
   );
